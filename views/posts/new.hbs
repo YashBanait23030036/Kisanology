@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/posts.css">
+
+<div class="posts">
+    <h1>Ask a question</h1>
+    <form method="POST" action="/posts">
+        <div>
+            <label for="question">Question:</label>
+            <input type="text" id="question" name="question" required>
+        </div>
+        {{!-- <div>
+            <label for="answers">Answers:</label>
+            <textarea id="answers" name="answers" required></textarea>
+        </div> --}}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/posts" class="back-link">Back to all posts</a>
+</div>
