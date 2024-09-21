@@ -14,7 +14,7 @@ const searchRoutes= require('./routes/search')
 const bodyParser = require('body-parser');
 const faqRoutes= require('./routes/faq')
 const postsRoutes= require("./routes/posts")
-
+const crypto = require('crypto')
 
 require('dotenv').config();
 
@@ -68,17 +68,22 @@ app.use("/posts", postsRoutes)
 
 
 // ROUTING
-app.get( "/",(req, res)=>{
-    Crop.find().lean().then(function(crops){
-      res.render('index', {
-        crops,
-        sidebarCrops: crops.slice(0, 7) 
-      })
-    }).catch(function(err){
-      console.log(err);
-    })
-})
+// app.get( "/",(req, res)=>{
+//     Crop.find().lean().then(function(crops){
+//       res.render('index', {
+//         crops,
+//         sidebarCrops: crops.slice(0, 7) 
+//       })
+//     }).catch(function(err){
+//       console.log(err);
+//     })
+// })
 
+
+app.get( "/",(req, res)=>{
+  // crypto.randomBytes(64).toString('hex');
+  console.log(crypto.randomBytes(64).toString('hex'));
+})
 
 app.get("/crops/:cropId", function(req, res){
   
