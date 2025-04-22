@@ -1,2 +1,1 @@
-This website is for farmer
-
+This project is a dynamic, user-friendly website designed to provide farmers with essential agricultural updates, weather forecasts, and market prices. The website is built with Node.js for backend functionality and MongoDB for database management, ensuring a scalable and responsive platform.
